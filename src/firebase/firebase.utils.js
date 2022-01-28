@@ -1,7 +1,6 @@
 import firebase from "firebase/compat/app";
 import 'firebase/compat/firestore';
 import 'firebase/compat/auth';
-import { __SECRET_INTERNALS_DO_NOT_USE_OR_YOU_WILL_BE_FIRED } from "react-dom";
 
 const firebaseConfig = {
     apiKey: "AIzaSyDHxgfccjFmE_duJWUDCVLLeBvu6FZ_m00",
