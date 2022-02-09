@@ -7,13 +7,19 @@ import CollectionItem from "../../components/collection-item/collection-item.com
 
 import './collection.style.scss';
 
-const CollectionPage = ({collection}) => {
-    console.log(collection);
+const CollectionPage = ({collection:{title, items}}) => {
     return(
-    <div className="collection-page">
-        <h2>Collection Page</h2>
-    </div>
-    );
+        <div className="collection-page">
+            <h2 className="title">{title.toUpperCase()}</h2>
+            <div className="items">
+                {
+                    items.map(item => (
+                        <CollectionItem key={item.id} item={item}></CollectionItem>
+                    ))
+                }
+            </div>
+        </div>
+        );
 };
 const mapStateToProps = (state, ownProps) => ({
     collection:selectCollection(ownProps.match.params.collectionId)(state)
